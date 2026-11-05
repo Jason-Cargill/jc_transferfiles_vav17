@@ -1,0 +1,8 @@
+<config>
+  <!-- 2500000 steps x 2 fs = 5 ns per work unit; a frame every 0.5 ns -->
+  <numSteps>2500000</numSteps>
+  <xtcFreq>250000</xtcFreq>
+  <precision>mixed</precision>
+  <xtcAtoms>solute</xtcAtoms>
+  <energyTolerance>10000</energyTolerance>
+</config>

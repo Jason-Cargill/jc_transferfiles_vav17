@@ -1,0 +1,31 @@
+<project type="0x28" id="15506">
+  <gpu/>
+  <min-core-version v="8.3.1"/>
+  <contact v="vvoelz@temple.edu"/>
+
+  <runs v="20"/>
+  <clones v="100"/>
+  <gens v="1000"/>
+  <atoms v="96809"/>
+
+  <timeout v="1.5"/>
+  <deadline v="2"/>
+  <k-factor v="0.75"/>
+  <stats_credit v="42602"/>
+  <job-priority v="-gen clone run"/>
+
+  <send>
+    $home/RUN$run/core.xml
+    $home/RUN$run/system.xml
+    $home/RUN$run/integrator.xml
+    state.xml
+  </send>
+
+  <create-command>
+    ln -s -f $home/RUN$run/state.xml $jobdir/state.xml
+  </create-command>
+
+  <next-gen-command>
+    mv -f $results/checkpointState.xml $jobdir/state.xml
+  </next-gen-command>
+</project>
